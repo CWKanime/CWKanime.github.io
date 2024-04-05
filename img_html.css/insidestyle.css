@@ -128,7 +128,10 @@ header {
     .menu-icon {
         left: 0.8em;
     }
-
+    main{
+        margin: 3em auto 5em auto; 
+        padding: 0;
+    }
 }
 
 main{

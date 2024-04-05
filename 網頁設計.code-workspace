@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "電商網頁"
+		"liveServer.settings.multiRootWorkspaceName": "電商網頁",
+		"liveServer.settings.port": 5501
 	}
 }
