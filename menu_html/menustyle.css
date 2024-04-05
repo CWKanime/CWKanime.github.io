@@ -232,3 +232,16 @@ footer {
     width: 100%;
     text-align: center; /* 將內容置中 */
 }
+@media (max-width: 900px) {
+    .container {
+    flex-direction: column; /* 將主要內容列的方向改為垂直 */
+    order: 0; /* 將內容放在上方 */
+    margin-bottom: 20px; /* 在內容和圖片之間添加一些間距 */
+    }
+
+    .text{
+    order: 1; /* 將圖片放在下方 */
+    align-items: center;
+    justify-content: center;
+    }
+}
