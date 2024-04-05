@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'jf-openhuninn';
+    src: url('/font/jf-openhuninn-2.0.ttf') format('truetype');
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'jf-openhuninn', sans-serif; 
+}
+body {
+    display: flex;
+    justify-content: space-between; /* 左右两侧空间平均分配 */
+    margin: 0;
+    padding: 0;
+    background-image: url(/images/background2.png);
+    background-size: 426px 240px;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+header {
+    display: flex;
+    align-items: center; /* 垂直居中 */ 
+    justify-content: center; 
+    background-color: #fbd269;
+    font-size: 25px;
+    position: relative;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+     z-index: 999;
+}
+
+.logo-container, .text-container {
+    position: relative;
+    margin-right: 10px; /* 可以调整两个元素之间的间距 */
+}
+.menu li a {
+    text-decoration: none;
+    color: inherit; 
+}
+.logo {
+    height: auto;
+    width: 80px;
+    position: relative;
+}
+.homelink{
+    text-decoration: none;
+    color: black;
+}
+.homelink:hover{
+    cursor: pointer;
+}
+.menu-icon {
+    cursor: pointer;
+    font-size: 30px;
+    left: 1.2em;
+    position: absolute;
+}
+.menu {
+    position: absolute;
+    top: 0;
+    left: -60%; /* 初始位置在页面外部 */
+    width: 40%; /* 占据页面的一半宽度 */
+    height: 100vh; /* 占据整个视口高度 */
+    background-color: #fbc336;
+    list-style: none;
+    margin: 0;
+    transition: left 0.3s ease; /* 添加过渡效果 */
+    z-index: 1; /* 保证菜单在上面 */
+    padding: 0; /* 移除padding */
+    box-sizing: border-box; /* 使用border-box盒模型 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu li:hover {
+     color: aliceblue; /* 鼠标悬停时背景颜色 */
+}
+.menu li {
+     font-size: 0.8em;
+     text-align: left;
+     padding: 30px;
+     color: black;
+     line-height: 28px;
+}
+.social-icon{
+    text-align: left;
+    font-size: 38px;
+    color: black;
+    line-height: 100px;
+}
+.social-icon:hover {
+    color: aliceblue; /* 鼠标悬停时背景颜色 */
+}
+.menu.show {
+    left: 0; /* 当有.show类时，将菜单向左移动显示 */
+}
+@media (max-width:900px) {
+    header {
+        padding: 5px;
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        left: -60%; /* 初始位置在页面外部 */
+        width: 60%; /* 占据页面的一半宽度 */
+        height: 100vh; /* 占据整个视口高度 */
+        background-color: #fbc336;
+        list-style: none;
+        margin: 0;
+        transition: left 0.3s ease; /* 添加过渡效果 */
+        z-index: 1; /* 保证菜单在上面 */
+        padding: 0; /* 移除padding */
+        box-sizing: border-box; /* 使用border-box盒模型 */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu li {
+        font-size: 0.8em;
+        text-align: left;
+    }
+    .menu-icon {
+        left: 0.8em;
+    }
+}
+
+main{
+    margin: 0 auto; /* 左右邊距自動調整，將<main>置中 */
+    padding: 3em;
+    margin: 5em auto 5em auto; /* 上邊距3em，左右邊距自動調整，下邊距5em */
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.text {
+    flex: 1; /* 讓文字占用剩餘空間 */
+    margin-left: 20px; /* 調整文字與圖片之間的距離 */
+    max-width: 30em;
+    line-height: 1.65em;
+    font-size: 18px;
+}
+.text p{
+    margin-top: 1em;
+}
+.text p::first-letter {
+    margin-left: 2em;
+}
+
+
+.me_drawing{
+    width: 20em;
+    height: auto;
+    border-radius: 10%;
+    flex: 0 0 auto; /* 不要讓圖片拉伸 */
+    max-width: 100%; /* 圖片最大寬度為容器的一半 */
+}
+.s_title{
+    font-size: 28px;
+    margin: 1.5em;
+    font-weight: bold;
+}
+
+.s_li {
+    font-size: 20px;
+    margin: -1em 2em;
+    list-style-type: none;
+    line-height: 2em;
+}
+
+.s_li li {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+}
+
+.s_li li i {
+    margin-right: 5px; /* 調整星號與文字之間的間距 */
+}
+.social {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+.social a {
+    display: flex; /* 將 <a> 元素設置為 flex 容器 */
+    align-items: center; /* 垂直居中 */
+    color: black;
+    font-size: 3em;
+    margin-bottom: 10px; /* 垂直間距 */
+    text-decoration: none;
+}
+.social a i {
+    display: flex; /* 將 <i> 元素設置為 flex 容器 */
+    align-items: center; /* 垂直居中 */
+    line-height: 2em;
+    background-color: hsl(0, 0%, 0%,5%);
+    border-radius: 10%;
+}
+.social a i p{
+    padding-left: 0.38em;
+}
+
+.backicon {
+    width: 15em;
+    height: auto;
+    display:block;
+    margin: 5em auto 0;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center; /* 將內容置中 */
+}
