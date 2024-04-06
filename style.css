@@ -297,12 +297,12 @@ footer {
     text-align: center; /* 將內容置中 */
 }
 @media screen and (max-width: 900px) {
- 
+    .main_img{
+        align-items: center;
+    }
+    .stamp,.comic1,.comic2{
+        width: 90%;
+        align-items: center;
+    }
 }
-.main_img{
-    align-items: center;
-}
-.stamp,.comic1,.comic2{
-    width: 90%;
-    align-items: center;
-}
+
