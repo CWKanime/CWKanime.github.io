@@ -118,17 +118,13 @@ header {
         font-size: 0.8em;
         text-align: left;
     }
-    main{
-        margin: 0 0 0 0; 
-        padding: 0;
-    }
     
 }
 
 
 
 main {
-    margin: 80px 0 0; /* 上邊距3em，左右邊距自動調整，下邊距5em */
+    margin: 90px 0 0; /* 上邊距3em，左右邊距自動調整，下邊距5em */
     position: relative;
 }
 .imglink{
@@ -275,15 +271,6 @@ main {
 }
 .main_img {
     position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center; /* 讓容器居中 */
-}
-
-.main_img {
-    position: relative;
-    width: 100%;
-    height: 100%;
     text-align: center; /* 讓容器居中 */
 }
 
@@ -308,4 +295,14 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center; /* 將內容置中 */
+}
+@media screen and (max-width: 900px) {
+ 
+}
+.main_img{
+    align-items: center;
+}
+.stamp,.comic1,.comic2{
+    width: 90%;
+    align-items: center;
 }
