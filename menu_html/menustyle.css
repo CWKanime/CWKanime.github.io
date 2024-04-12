@@ -216,6 +216,16 @@ main{
 .social a i p{
     padding-left: 0.38em;
 }
+p{
+    padding-bottom: 0.5em;
+}
+.stop i {
+    display: flex; /* 將 <i> 元素設置為 flex 容器 */
+    align-items: center; /* 垂直居中 */
+    line-height: 2em;
+    font-size: 2em;
+    color: red;
+}
 
 .backicon {
     width: 15em;
@@ -243,5 +253,15 @@ footer {
     order: 1; /* 將圖片放在下方 */
     align-items: center;
     justify-content: center;
+    }
+    .s_li li{
+        line-height: 1.2em;
+        margin-bottom: 1em;
+    }
+    main{
+        padding: 30px;
+    }
+    .social a{
+        font-size: 1.6em;
     }
 }
