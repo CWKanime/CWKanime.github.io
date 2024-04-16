@@ -169,7 +169,7 @@ main{
     border-radius: 10%;
     flex: 0 0 auto; /* 不要讓圖片拉伸 */
     max-width: 100%; /* 圖片最大寬度為容器的一半 */
-    padding-top: 18px;
+    margin-top: 1em;
 }
 .s_title{
     font-size: 28px;
@@ -188,9 +188,12 @@ main{
     display: flex;
     align-items: center; /* 垂直居中 */
 }
-
+.s_li li p{
+    padding-bottom: 0px;
+}
 .s_li li i {
     margin-right: 5px; /* 調整星號與文字之間的間距 */
+    color: #fbc336;
 }
 .social {
     list-style-type: none;
