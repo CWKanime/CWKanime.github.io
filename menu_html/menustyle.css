@@ -169,6 +169,7 @@ main{
     border-radius: 10%;
     flex: 0 0 auto; /* 不要讓圖片拉伸 */
     max-width: 100%; /* 圖片最大寬度為容器的一半 */
+    padding-top: 18px;
 }
 .s_title{
     font-size: 28px;
