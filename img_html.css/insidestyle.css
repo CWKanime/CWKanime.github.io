@@ -171,6 +171,9 @@ main {
     height: auto;
     position: relative;
 }
+.comic{
+    text-align: center;
+}
 .comicimg{
     width: 25em;
     height: auto;
@@ -184,6 +187,10 @@ main {
     width: 25em;
     height: auto;
     position: relative;
+    margin: 2em;
+}
+.weibi{
+    text-align: center;
 }
 .info{
     margin-top: 3em;
@@ -212,6 +219,7 @@ footer {
         width: 90%;
         align-items: center;
         text-align: center; /* 將文字置中 */
+        justify-content: center;
     }
     .content {
         text-align: left; /* 如果需要，將文字對齊左側 */
@@ -227,9 +235,6 @@ footer {
     .weibi_img {
         padding: 20px;
         width: 85%;
-    }
-    .comicimg {
-        width: 95%;
     }
     .comicall {
         align-items: center;

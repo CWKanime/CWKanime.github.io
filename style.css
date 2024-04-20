@@ -304,5 +304,9 @@ footer {
         width: 90%;
         align-items: center;
     }
+    .stamp{
+        width: 50%;
+        align-items: center;
+    }
 }
 
