@@ -9,6 +9,7 @@
 }
 body {
     display: flex;
+    flex-direction: column;
     justify-content: space-between; /* 左右两侧空间平均分配 */
     margin: 0;
     padding: 0;
@@ -126,6 +127,7 @@ header {
 main {
     margin: 90px 0 0; /* 上邊距3em，左右邊距自動調整，下邊距5em */
     position: relative;
+    margin-bottom: 3em;
 }
 .imglink{
     text-decoration: none; 
@@ -291,8 +293,9 @@ main {
 }
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
+    margin-bottom: 1em;
     width: 100%;
     text-align: center; /* 將內容置中 */
 }

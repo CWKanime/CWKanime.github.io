@@ -9,6 +9,7 @@
 }
 body {
     display: flex;
+    flex-direction: column;
     justify-content: space-between; /* 左右两侧空间平均分配 */
     margin: 0;
     padding: 0;
@@ -35,7 +36,7 @@ header {
 
 .logo-container, .text-container {
     position: relative;
-    margin-right: 10px; /* 可以调整两个元素之间的间距 */
+    margin-right: 10px; 
 }
 .menu li a {
     text-decoration: none;
@@ -141,6 +142,7 @@ main{
     position: relative;
     align-items: center;
     justify-content: center;
+    margin-bottom: 3em;
 }
 .container {
     display: flex;
@@ -213,12 +215,15 @@ main{
 .social a i {
     display: flex; /* 將 <i> 元素設置為 flex 容器 */
     align-items: center; /* 垂直居中 */
-    line-height: 2em;
+    line-height: 1em;
     background-color: hsl(0, 0%, 0%,5%);
-    border-radius: 10%;
+    border-radius: 0.3em;
+    padding: 0.2em;
+    margin-bottom: 1em;
 }
 .social a i p{
     padding-left: 0.38em;
+    padding-bottom: 0;
 }
 p{
     padding-bottom: 0.5em;
@@ -241,8 +246,9 @@ p{
 }
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
+    margin-bottom: 1em;
     width: 100%;
     text-align: center; /* 將內容置中 */
 }
@@ -252,14 +258,16 @@ footer {
     order: 0; /* 將內容放在上方 */
     margin-bottom: 20px; /* 在內容和圖片之間添加一些間距 */
     }
-
     .text{
     order: 1; /* 將圖片放在下方 */
     align-items: center;
     justify-content: center;
     }
+    .image{
+        text-align: center;
+    }
     .s_li li{
-        line-height: 1.2em;
+        line-height: 1em;
         margin-bottom: 1em;
     }
     main{
