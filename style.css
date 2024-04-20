@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'jf-openhuninn';
     src: url('/font/jf-openhuninn-2.0.ttf') format('truetype');
+    font-display: swap; /* 確保在字體加載失敗時提供替代方案 */
 }
 * {
     padding: 0;
@@ -13,7 +14,7 @@ body {
     justify-content: space-between; /* 左右两侧空间平均分配 */
     margin: 0;
     padding: 0;
-    background-image: url(/images/background_img.png);
+    background-image: url(/images/background2.png);
     background-size: 426px 240px;
     background-position: center;
     background-repeat: repeat;
@@ -24,7 +25,6 @@ header {
     align-items: center; /* 垂直居中 */ 
     justify-content: center; 
     background-color: #fbd269;
-    font-size: 45px;
     position: relative;
     padding: 5px;
     position: fixed;
@@ -33,9 +33,13 @@ header {
     width: 100%;
      z-index: 999;
 }
+header p{
+    font-size: 2.8em;
+}
+
 .logo-container, .text-container {
     position: relative;
-    margin-right: 10px; /* 可以调整两个元素之间的间距 */
+    margin-right: 10px; 
 }
 .menu li a {
     text-decoration: none;
@@ -45,6 +49,13 @@ header {
     height: auto;
     width: 80px;
     position: relative;
+}
+.homelink{
+    text-decoration: none;
+    color: black;
+}
+.homelink:hover{
+    cursor: pointer;
 }
 .menu-icon {
     cursor: pointer;
@@ -74,12 +85,11 @@ header {
      color: aliceblue; /* 鼠标悬停时背景颜色 */
 }
 .menu li {
-     font-size: 0.8em;
+     font-size: 30px;
      text-align: left;
      padding: 30px;
      color: black;
      line-height: 28px;
-
 }
 .social-icon{
     text-align: left;
@@ -116,11 +126,19 @@ header {
         align-items: center;
     }
     .menu li {
-        font-size: 0.8em;
+        font-size: 25px;
         text-align: left;
     }
-    
 }
+@media (max-width:300px) {
+    .logo{
+        width: 1em;
+    }
+    header p{
+        font-size: 0.7em;
+    }
+}
+
 
 
 
