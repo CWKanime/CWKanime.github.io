@@ -231,6 +231,17 @@ main{
 p{
     padding-bottom: 0.5em;
 }
+.workul li{
+    line-height: 2em;
+}
+.workul li a{
+    color: black;
+    text-decoration: none;
+}
+.workul li:hover{
+    background-color: hsl(0, 0%, 80%,30%);
+    border-radius: 30px;
+}
 .stop i {
     display: flex; /* 將 <i> 元素設置為 flex 容器 */
     align-items: center; /* 垂直居中 */
