@@ -14,7 +14,7 @@ body {
     justify-content: space-between; /* 左右两侧空间平均分配 */
     margin: 0;
     padding: 0;
-    background-image: url(/images/background2.png);
+    background-image: url(/images/background_img.png);
     background-size: 426px 240px;
     background-position: center;
     background-repeat: repeat;
