@@ -235,11 +235,45 @@ main {
   height: calc(100% - 50px); 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .desktop-search {
       display: none !important;
   }
   .mobile-search-icon {
       display: block;
+  }
+}
+
+.bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+}
+
+.bottom-navbar a {
+  text-align: center;
+  flex: 1;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.bottom-navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Font Awesome icons */
+.fa {
+  padding-right: 5px;
+}
+
+@media (min-width: 992px) {
+  .bottom-navbar {
+      display: none !important;
   }
 }
