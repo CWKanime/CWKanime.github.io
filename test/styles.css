@@ -277,3 +277,95 @@ main {
       display: none !important;
   }
 }
+.logo{
+  text-decoration: none;
+  color: black;
+}
+.logo:hover{
+  color: black;
+}
+
+.more{
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin: 10px 0px;
+  padding: 10px 0px;
+}
+.rounded-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+.rating {
+  display: inline-block;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  cursor: pointer;
+  font-size: 24px;
+  color: #f8ce0b; /* 黃色 */
+  margin-right: 5px; /* 調整星星之間的間距 */
+}
+.rounded-avatar-2 {
+  position: fixed;
+  top: 50px; /* 調整淡出效果出現的位置 */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8); /* 調整背景顏色和透明度 */
+  padding: 20px;
+  border-radius: 50%;
+  display: none;
+}
+@media (max-width: 992px) {
+  .bottom{
+    margin-bottom: 7em;
+  }
+}
+.modal-content {
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  text-align: center;
+}
+
+.modal.show .modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.btn{
+  width: 100%;
+}
+.buy {
+  background-color: #f2d28c !important;
+  color: white;
+  font-weight: bold;
+}
+.buy:hover {
+  background-color: #f6cb21 !important;
+  color: white;
+}
+.share{
+  border: 0px;
+  background-color: transparent;
+}
