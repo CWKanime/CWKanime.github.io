@@ -1,0 +1,117 @@
+#myCarousel .carousel-item img{
+  width: 100%;
+}
+
+main {
+  overflow-x: hidden;
+  align-items: center;
+}
+.round{
+  border-radius:15px;
+  padding: 0 10px;
+}
+
+.top{
+  margin-top: 10em;
+}
+.center{
+  align-items: center;
+  text-align: center;
+}
+.custom-img {
+  object-fit: cover; /* 保持比例，不變形 */
+  max-height: 300px; /* 限制圖片高度 */
+}
+@media (max-width: 992px) {
+  main {
+    overflow-x: hidden;
+  }
+  .top{
+    margin-top: 5em;
+  }
+  .d-block{
+    height: 200px;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+.fa-bars{
+  color: black;
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar .container-fluid .navbar-toggler {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  transition: left 0.3s ease;
+  z-index: 1045; /* Bootstrap modal z-index is 1050 */
+}
+.sidebar.show {
+  left: 0;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1040; /* Ensure it's below the sidebar */
+}
+.overlay.show {
+  display: block;
+}
+
+.container-post {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* iOS 滾動支援 */
+}
+.item {
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  scroll-snap-align: center;
+}
+.round-item {
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%; /* 圖片的寬度填滿父級 col 元素 */
+  height: auto; /* 圖片的高度自動調整 */
+}
+.post {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 讓圖片保持比例並填滿 col 元素 */
+}
+.container-item {
+  margin-bottom: 10px;
+}
+.container-item-p {
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .col-4 {
+      width: 100%; /* 將 col-4 元素的寬度設置為 100% */
+  }
+}
