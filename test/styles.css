@@ -46,8 +46,8 @@ main {
 .sidebar {
   position: fixed;
   top: 0;
-  left: -40%;
-  width: 40%;
+  left: -30%;
+  width: 30%;
   height: 100%;
   background-color: #f8f9fa;
   padding: 1rem;
@@ -69,7 +69,79 @@ main {
 .overlay.show {
   display: block;
 }
-
+.menu a{
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  padding-left: 3rem;
+}
+.menu li{
+  margin: 1.15em 0px;
+}
+.menu li :hover{
+  color: gray !important;
+  text-decoration: none;
+}
+#sidebar i {
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* 將圖示居中對齊 */
+  transform: translateX(-50%);
+  border-top: 1px solid #000; /* 添加頂部邊框線 */
+  width: 100%; /* 確保邊框線延伸到整個寬度 */
+  text-align: left; /* 將圖示居中對齊 */
+  padding: 30px; /* 調整圖示與邊框線之間的距離 */
+  font-size: 25px;
+  padding-left: 3rem;
+}
+.login{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+}
+.menu-h3{
+  padding-left: 3rem;
+  margin-top: 2.5rem;
+}
+@media (max-width: 992px) {
+  #sidebar i {
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* 將圖示居中對齊 */
+    transform: translateX(-50%);
+    border-top: 1px solid #000; /* 添加頂部邊框線 */
+    width: 100%; /* 確保邊框線延伸到整個寬度 */
+    text-align: left; /* 將圖示居中對齊 */
+    padding: 30px; /* 調整圖示與邊框線之間的距離 */
+    font-size: 20px;
+  }
+  .login{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+  }
+  .menu a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 0px;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -60%;
+    width: 60%;
+    height: 100%;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    transition: left 0.3s ease;
+    z-index: 1045; /* Bootstrap modal z-index is 1050 */
+  }
+  .menu-h3{
+    text-align: center;
+    padding: 0px;
+  }
+}
 .container-post {
   width: 100%;
   overflow-x: auto;
@@ -86,13 +158,13 @@ main {
 .round-item {
   border-radius: 15px;
   overflow: hidden;
-  width: 100%; /* 圖片的寬度填滿父級 col 元素 */
-  height: auto; /* 圖片的高度自動調整 */
+  width: 100%; 
+  height: auto; 
 }
 .post {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 讓圖片保持比例並填滿 col 元素 */
+  object-fit: cover;
 }
 .container-item {
   margin-bottom: 10px;
@@ -100,8 +172,74 @@ main {
 .container-item-p {
   margin-top: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .col-4 {
-      width: 100%; /* 將 col-4 元素的寬度設置為 100% */
+      width: 100%;
+  }
+}
+/* 基本样式 */
+.search-container {
+  position: relative;
+}
+
+.desktop-search {
+  display: flex;
+  align-items: center;
+}
+
+.desktop-search #desktop-search-input {
+  width: calc(100% - 40px); 
+}
+
+.desktop-search #desktop-search-icon {
+  cursor: pointer;
+}
+
+.mobile-search-icon {
+  display: none;
+  cursor: pointer;
+}
+
+
+.mobile-search-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3); 
+  z-index: 10;
+  padding: 10px;
+}
+
+.mobile-search-input {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.mobile-search-input input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.mobile-search-input #mobile-search-addon {
+  cursor: pointer;
+}
+
+.semi-transparent-content {
+  background-color: rgba(255, 255, 255, 0.7); 
+  height: calc(100% - 50px); 
+}
+
+@media (max-width: 768px) {
+  .desktop-search {
+      display: none !important;
+  }
+  .mobile-search-icon {
+      display: block;
   }
 }
