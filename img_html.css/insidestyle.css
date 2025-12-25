@@ -1,17 +1,21 @@
 @font-face {
     font-family: 'jf-openhuninn';
     src: url('/font/jf-openhuninn-2.0.ttf') format('truetype');
-    font-display: swap; /* 確保在字體加載失敗時提供替代方案 */
+    font-display: swap;
+    /* 確保在字體加載失敗時提供替代方案 */
 }
+
 * {
     padding: 0;
     margin: 0;
-    font-family: 'jf-openhuninn', sans-serif; 
+    font-family: 'jf-openhuninn', sans-serif;
 }
+
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* 左右两侧空间平均分配 */
+    justify-content: space-between;
+    /* 左右两侧空间平均分配 */
     margin: 0;
     padding: 0;
     background-image: url(/images/background2.png);
@@ -20,10 +24,12 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
 }
+
 header {
     display: flex;
-    align-items: center; /* 垂直居中 */ 
-    justify-content: center; 
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
     background-color: #fbd269;
     font-size: 25px;
     position: relative;
@@ -32,106 +38,143 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-     z-index: 999;
+    z-index: 999;
 }
-h1{
+
+h1 {
     font-size: 35px;
 }
 
-.logo-container, .text-container {
+.logo-container,
+.text-container {
     position: relative;
-    margin-right: 10px; /* 可以调整两个元素之间的间距 */
+    margin-right: 10px;
+    /* 可以调整两个元素之间的间距 */
 }
+
 .menu li a {
     text-decoration: none;
-    color: inherit; 
+    color: inherit;
 }
+
 .logo {
     height: auto;
     width: 80px;
     position: relative;
 }
-.homelink{
+
+.homelink {
     text-decoration: none;
     color: black;
+    display: flex;
+    align-items: center;
 }
-.homelink:hover{
+
+.homelink:hover {
     cursor: pointer;
 }
+
 .menu-icon {
     cursor: pointer;
     font-size: 30px;
     left: 1.2em;
     position: absolute;
 }
+
 .menu {
     position: absolute;
     top: 0;
-    left: -60%; /* 初始位置在页面外部 */
-    width: 40%; /* 占据页面的一半宽度 */
-    height: 100vh; /* 占据整个视口高度 */
+    left: -60%;
+    /* 初始位置在页面外部 */
+    width: 40%;
+    /* 占据页面的一半宽度 */
+    height: 100vh;
+    /* 占据整个视口高度 */
     background-color: #fbc336;
     list-style: none;
     margin: 0;
-    transition: left 0.3s ease; /* 添加过渡效果 */
-    z-index: 1; /* 保证菜单在上面 */
-    padding: 0; /* 移除padding */
-    box-sizing: border-box; /* 使用border-box盒模型 */
+    transition: left 0.3s ease;
+    /* 添加过渡效果 */
+    z-index: 1;
+    /* 保证菜单在上面 */
+    padding: 0;
+    /* 移除padding */
+    box-sizing: border-box;
+    /* 使用border-box盒模型 */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .menu li:hover {
-     color: aliceblue; /* 鼠标悬停时背景颜色 */
+    color: aliceblue;
+    /* 鼠标悬停时背景颜色 */
 }
+
 .menu li {
-     font-size: 30px;
-     text-align: left;
-     padding: 30px;
-     color: black;
-     line-height: 28px;
+    font-size: 30px;
+    text-align: left;
+    padding: 30px;
+    color: black;
+    line-height: 28px;
 }
-.social-icon{
+
+.social-icon {
     text-align: left;
     font-size: 38px;
     color: black;
     line-height: 100px;
 }
+
 .social-icon:hover {
-    color: aliceblue; /* 鼠标悬停时背景颜色 */
+    color: aliceblue;
+    /* 鼠标悬停时背景颜色 */
 }
+
 .menu.show {
-    left: 0; /* 当有.show类时，将菜单向左移动显示 */
+    left: 0;
+    /* 当有.show类时，将菜单向左移动显示 */
 }
+
 @media screen and (max-width:900px) {
     header {
         padding: 5px;
     }
+
     .menu {
         position: absolute;
         top: 0;
-        left: -60%; /* 初始位置在页面外部 */
-        width: 60%; /* 占据页面的一半宽度 */
-        height: 100vh; /* 占据整个视口高度 */
+        left: -60%;
+        /* 初始位置在页面外部 */
+        width: 60%;
+        /* 占据页面的一半宽度 */
+        height: 100vh;
+        /* 占据整个视口高度 */
         background-color: #fbc336;
         list-style: none;
         margin: 0;
-        transition: left 0.3s ease; /* 添加过渡效果 */
-        z-index: 1; /* 保证菜单在上面 */
-        padding: 0; /* 移除padding */
-        box-sizing: border-box; /* 使用border-box盒模型 */
+        transition: left 0.3s ease;
+        /* 添加过渡效果 */
+        z-index: 1;
+        /* 保证菜单在上面 */
+        padding: 0;
+        /* 移除padding */
+        box-sizing: border-box;
+        /* 使用border-box盒模型 */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     .menu li {
         font-size: 25px;
         text-align: left;
     }
-    main{
-        margin: 0 0 0 0; 
+
+    main {
+        margin: 0 0 0 0;
         padding: 0;
     }
 }
@@ -139,70 +182,88 @@ h1{
 
 
 main {
-    margin-top: 90px ;/* 上邊距3em，左右邊距自動調整，下邊距5em */
+    margin-top: 90px;
+    /* 上邊距3em，左右邊距自動調整，下邊距5em */
     position: relative;
     margin-bottom: 3em;
 }
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.content, .youtube ,.stamp_all,.comicimg{
+.content,
+.youtube,
+.stamp_all,
+.comicimg {
     padding: 20px;
 }
-.youtube{
+
+.youtube {
     position: relative;
     width: 20em;
     height: 30em;
 }
-.content{
-    margin-top: 16px ;
+
+.content {
+    margin-top: 16px;
     max-width: 28em;
 }
-.content-text ,.info {
-    flex: 1; 
+
+.content-text,
+.info {
+    flex: 1;
     font-size: 18px;
     line-height: 26.5px;
     align-items: flex-start;
 }
+
 .content-text::first-letter {
     margin-left: 2em;
 }
-.stamp_all{
+
+.stamp_all {
     width: 25em;
     height: auto;
     position: relative;
 }
-.comic{
+
+.comic {
     text-align: center;
 }
-.comicimg{
+
+.comicimg {
     width: 25em;
     height: auto;
     position: relative;
 }
-.comic p{
+
+.comic p {
     margin-top: -1em;
-    padding: 1px 20px ;
+    padding: 1px 20px;
 }
-.weibi_img{
+
+.weibi_img {
     width: 25em;
     height: auto;
     position: relative;
     margin: 2em;
 }
-.weibi{
+
+.weibi {
     text-align: center;
 }
-.info{
+
+.info {
     margin-top: 3em;
 }
+
 .backicon {
     width: 15em;
     height: auto;
-    display:block;
+    display: block;
     margin: 5em auto 0;
     justify-content: center;
     align-items: center;
@@ -213,8 +274,10 @@ footer {
     bottom: 0;
     margin-bottom: 1em;
     width: 100%;
-    text-align: center; /* 將內容置中 */
+    text-align: center;
+    /* 將內容置中 */
 }
+
 @media screen and (max-width: 900px) {
     .container {
         flex-direction: column;
@@ -223,28 +286,42 @@ footer {
         align-self: center;
         width: 90%;
         align-items: center;
-        text-align: center; /* 將文字置中 */
+        text-align: center;
+        /* 將文字置中 */
         justify-content: center;
     }
+
     .content {
-        text-align: left; /* 如果需要，將文字對齊左側 */
+        text-align: left;
+        /* 如果需要，將文字對齊左側 */
     }
-    .youtube, .stamp, .comic, .weibi_img ,.content-text{
-        order: 1; /* 將圖片放在下方 */
-        align-items: center; /* 垂直置中 */
+
+    .youtube,
+    .stamp,
+    .comic,
+    .weibi_img,
+    .content-text {
+        order: 1;
+        /* 將圖片放在下方 */
+        align-items: center;
+        /* 垂直置中 */
         justify-content: center;
     }
+
     h1 {
         font-size: 28px;
     }
+
     .weibi_img {
         padding: 20px;
         width: 85%;
     }
+
     .comicall {
         align-items: center;
         justify-content: center;
     }
+
     .backicon {
         margin-bottom: 5em;
     }

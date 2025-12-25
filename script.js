@@ -1,16 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var menuIcon = document.querySelector('.menu-icon');
     var menu = document.querySelector('.menu');
 
-    // 点击菜单图标时切换菜单的显示状态
-    menuIcon.addEventListener('click', function() {
+
+    menuIcon.addEventListener('click', function () {
         menu.classList.toggle('show');
     });
 
-    // 点击页面其他地方时关闭菜单
-    document.addEventListener('click', function(event) {
+
+    document.addEventListener('click', function (event) {
         var target = event.target;
-        // 如果点击目标不是菜单或菜单图标，则关闭菜单
+
         if (!target.closest('.menu') && !target.closest('.menu-icon')) {
             menu.classList.remove('show');
         }
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const mainImgContainer = document.querySelector('.main_img');
 
 // 獲取所有圖片容器
-const imageContainers = document.querySelectorAll('.walking-container, .stamp, .pachinnko-container, .ikimono-container, .cut-container, .comic1 , .comic2 , .babo-container, .light-container');
+const imageContainers = document.querySelectorAll('.walking-container, .stamp, .pachinnko-container, .ikimono-container, .cut-container, .comic1 , .comic2 , .babo-container, .light-container,.award-container1,.award-container2,.container3,.container4,.container5');
 
 // 將所有圖片容器轉換為陣列
 const imageContainersArray = Array.from(imageContainers);

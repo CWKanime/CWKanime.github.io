@@ -1,17 +1,21 @@
 @font-face {
     font-family: 'jf-openhuninn';
     src: url('/font/jf-openhuninn-2.0.ttf') format('truetype');
-    font-display: swap; /* 確保在字體加載失敗時提供替代方案 */
+    font-display: swap;
+    /* 確保在字體加載失敗時提供替代方案 */
 }
+
 * {
     padding: 0;
     margin: 0;
-    font-family: 'jf-openhuninn', sans-serif; 
+    font-family: 'jf-openhuninn', sans-serif;
 }
+
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* 左右两侧空间平均分配 */
+    justify-content: space-between;
+    /* 左右两侧空间平均分配 */
     margin: 0;
     padding: 0;
     background-image: url(/images/background_img.png);
@@ -20,10 +24,12 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
 }
+
 header {
     display: flex;
-    align-items: center; /* 垂直居中 */ 
-    justify-content: center; 
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
     background-color: #fbd269;
     position: relative;
     padding: 5px;
@@ -31,110 +37,147 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-     z-index: 999;
+    z-index: 999;
 }
-header p{
+
+header p {
     font-size: 2.8em;
 }
 
-.logo-container, .text-container {
+.logo-container,
+.text-container {
     position: relative;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
+
 .menu li a {
     text-decoration: none;
-    color: inherit; 
+    color: inherit;
 }
+
 .logo {
     height: auto;
     width: 80px;
     position: relative;
 }
-.homelink{
+
+.homelink {
     text-decoration: none;
     color: black;
+    display: flex;
+    align-items: center;
 }
-.homelink:hover{
+
+.homelink:hover {
     cursor: pointer;
 }
+
 .menu-icon {
     cursor: pointer;
     font-size: 30px;
     left: 1.2em;
     position: absolute;
 }
+
 .menu {
     position: absolute;
     top: 0;
-    left: -60%; /* 初始位置在页面外部 */
-    width: 40%; /* 占据页面的一半宽度 */
-    height: 100vh; /* 占据整个视口高度 */
+    left: -60%;
+    /* 初始位置在页面外部 */
+    width: 40%;
+    /* 占据页面的一半宽度 */
+    height: 100vh;
+    /* 占据整个视口高度 */
     background-color: #fbc336;
     list-style: none;
     margin: 0;
-    transition: left 0.3s ease; /* 添加过渡效果 */
-    z-index: 1; /* 保证菜单在上面 */
-    padding: 0; /* 移除padding */
-    box-sizing: border-box; /* 使用border-box盒模型 */
+    transition: left 0.3s ease;
+    /* 添加过渡效果 */
+    z-index: 1;
+    /* 保证菜单在上面 */
+    padding: 0;
+    /* 移除padding */
+    box-sizing: border-box;
+    /* 使用border-box盒模型 */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .menu li:hover {
-     color: aliceblue; /* 鼠标悬停时背景颜色 */
+    color: aliceblue;
+    /* 鼠标悬停时背景颜色 */
 }
+
 .menu li {
-     font-size: 30px;
-     text-align: left;
-     padding: 30px;
-     color: black;
-     line-height: 28px;
+    font-size: 30px;
+    text-align: left;
+    padding: 30px;
+    color: black;
+    line-height: 28px;
 }
-.social-icon{
+
+.social-icon {
     text-align: left;
     font-size: 38px;
     color: black;
     line-height: 100px;
 }
+
 .social-icon:hover {
-    color: aliceblue; /* 鼠标悬停时背景颜色 */
+    color: aliceblue;
+    /* 鼠标悬停时背景颜色 */
 }
+
 .menu.show {
-    left: 0; /* 当有.show类时，将菜单向左移动显示 */
+    left: 0;
+    /* 当有.show类时，将菜单向左移动显示 */
 }
+
 @media (max-width:900px) {
     header {
         padding: 5px;
     }
+
     .menu {
         position: absolute;
         top: 0;
-        left: -60%; /* 初始位置在页面外部 */
-        width: 60%; /* 占据页面的一半宽度 */
-        height: 100vh; /* 占据整个视口高度 */
+        left: -60%;
+        /* 初始位置在页面外部 */
+        width: 60%;
+        /* 占据页面的一半宽度 */
+        height: 100vh;
+        /* 占据整个视口高度 */
         background-color: #fbc336;
         list-style: none;
         margin: 0;
-        transition: left 0.3s ease; /* 添加过渡效果 */
-        z-index: 1; /* 保证菜单在上面 */
-        padding: 0; /* 移除padding */
-        box-sizing: border-box; /* 使用border-box盒模型 */
+        transition: left 0.3s ease;
+        /* 添加过渡效果 */
+        z-index: 1;
+        /* 保证菜单在上面 */
+        padding: 0;
+        /* 移除padding */
+        box-sizing: border-box;
+        /* 使用border-box盒模型 */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     .menu li {
         font-size: 25px;
         text-align: left;
     }
 }
+
 @media (max-width:300px) {
-    .logo{
+    .logo {
         width: 1em;
     }
-    header p{
+
+    header p {
         font-size: 0.7em;
     }
 }
@@ -143,41 +186,52 @@ header p{
 
 
 main {
-    margin: 90px 0 0; /* 上邊距3em，左右邊距自動調整，下邊距5em */
+    margin: 90px 0 0;
+    /* 上邊距3em，左右邊距自動調整，下邊距5em */
     position: relative;
     margin-bottom: 3em;
 }
-.imglink{
-    text-decoration: none; 
+
+.imglink {
+    text-decoration: none;
 }
+
 .walking {
     width: 13em;
     height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
-    transition: box-shadow 0.3s ease; /* 添加過渡效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 陰影效果 */
+    transition: box-shadow 0.3s ease;
+    /* 添加過渡效果 */
     border-radius: 10%;
 }
 
 .walking:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 懸停時增加陰影 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* 懸停時增加陰影 */
     cursor: pointer;
 }
 
 .stamp {
     margin-top: 5em;
     display: flex;
-    justify-content: center; /* 讓圖片水平居中 */
-    gap: 20px; /* 圖片之間的間距 */
+    justify-content: center;
+    /* 讓圖片水平居中 */
+    gap: 20px;
+    /* 圖片之間的間距 */
     position: relative;
     width: 25em;
     height: auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* 陰影效果 */
-    transition: box-shadow 0.3s ease; /* 添加過渡效果 */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    /* 陰影效果 */
+    transition: box-shadow 0.3s ease;
+    /* 添加過渡效果 */
     border-radius: 10%;
 }
 
 .stamp:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 懸停時增加陰影 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* 懸停時增加陰影 */
     cursor: pointer;
 }
 
@@ -185,58 +239,75 @@ main {
     position: relative;
     width: 30em;
     height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
-    transition: box-shadow 0.3s ease; /* 添加過渡效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 陰影效果 */
+    transition: box-shadow 0.3s ease;
+    /* 添加過渡效果 */
     border-radius: 10%;
 }
 
 .pachinnko:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 懸停時增加陰影 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* 懸停時增加陰影 */
     cursor: pointer;
 }
+
 .ikimono {
     position: relative;
     width: 23em;
     height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
-    transition: box-shadow 0.3s ease; /* 添加過渡效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 陰影效果 */
+    transition: box-shadow 0.3s ease;
+    /* 添加過渡效果 */
     border-radius: 10%;
 }
 
 .ikimono:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 懸停時增加陰影 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* 懸停時增加陰影 */
     cursor: pointer;
 }
+
 .cut {
     position: relative;
     width: 26em;
     height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
-    transition: box-shadow 0.3s ease; /* 添加過渡效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 陰影效果 */
+    transition: box-shadow 0.3s ease;
+    /* 添加過渡效果 */
     border-radius: 10%;
 }
 
 .cut:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 懸停時增加陰影 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* 懸停時增加陰影 */
     cursor: pointer;
 }
+
 .comic1 {
     position: relative;
     width: 26em;
     height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
-    transition: box-shadow 0.3s ease; /* 添加過渡效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 陰影效果 */
+    transition: box-shadow 0.3s ease;
+    /* 添加過渡效果 */
     border-radius: 10%;
 }
 
 .comic1 img {
-    width: 100%; /* 確保圖片填滿容器 */
+    width: 100%;
+    /* 確保圖片填滿容器 */
     height: auto;
-    display: block; /* 避免底部間距 */
+    display: block;
+    /* 避免底部間距 */
 }
 
 .comic1:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 懸停時增加陰影 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* 懸停時增加陰影 */
     cursor: pointer;
 }
 
@@ -244,20 +315,25 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 26em; /* 讓容器僅包含圖片的寬度 */
+    width: 26em;
+    /* 讓容器僅包含圖片的寬度 */
     height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
-    transition: box-shadow 0.3s ease; /* 添加過渡效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 陰影效果 */
+    transition: box-shadow 0.3s ease;
+    /* 添加過渡效果 */
     border-radius: 10%;
 }
 
 .comic2 img {
-    width: 100%; /* 確保圖片填滿容器 */
+    width: 100%;
+    /* 確保圖片填滿容器 */
     height: auto;
 }
 
 .comic2:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 懸停時增加陰影 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* 懸停時增加陰影 */
     cursor: pointer;
 }
 
@@ -266,13 +342,16 @@ main {
     position: relative;
     width: 18em;
     height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
-    transition: box-shadow 0.3s ease; /* 添加過渡效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 陰影效果 */
+    transition: box-shadow 0.3s ease;
+    /* 添加過渡效果 */
     border-radius: 10%;
 }
 
 .babo:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 懸停時增加陰影 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* 懸停時增加陰影 */
     cursor: pointer;
 }
 
@@ -280,34 +359,76 @@ main {
     position: relative;
     width: 30em;
     height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
-    transition: box-shadow 0.3s ease; /* 添加過渡效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 陰影效果 */
+    transition: box-shadow 0.3s ease;
+    /* 添加過渡效果 */
     border-radius: 10%;
 }
 
 .light:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 懸停時增加陰影 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* 懸停時增加陰影 */
     cursor: pointer;
 }
+
+.award {
+    position: relative;
+    width: 25em;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    border-radius: 10%;
+}
+
+.award:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
 .main_img {
     position: relative;
-    text-align: center; /* 讓容器居中 */
+    text-align: center;
+    /* 讓容器居中 */
 }
 
 /* 隨機分佈圖片容器 */
-.walking-container, .stamp, .pachinnko-container, .ikimono-container, .cut-container, .comic1 , .comic2 ,.babo-container, .light-container {
-    display: inline-block; /* 讓容器符合圖片大小 */
-    margin: 20px; /* 設置間距 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
-    transition: box-shadow 0.3s ease; /* 添加過渡效果 */
+.walking-container,
+.stamp,
+.pachinnko-container,
+.ikimono-container,
+.cut-container,
+.comic1,
+.comic2,
+.babo-container,
+.light-container,
+.award-container {
+    display: inline-block;
+    /* 讓容器符合圖片大小 */
+    margin: 20px;
+    /* 設置間距 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 陰影效果 */
+    transition: box-shadow 0.3s ease;
+    /* 添加過渡效果 */
     border-radius: 10%;
 }
 
 /* 圖片樣式 */
-.walking-container img, .stamp img, .pachinnko-container img, .ikimono-container img, .cut-container img, .comic1 img, .comic2 img, .babo-container img, .light-container img {
+.walking-container img,
+.stamp img,
+.pachinnko-container img,
+.ikimono-container img,
+.cut-container img,
+.comic1 img,
+.comic2 img,
+.babo-container img,
+.light-container img,
+.award-container img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover; /* 圖片不變形，覆蓋整個容器 */
+    object-fit: cover;
+    /* 圖片不變形，覆蓋整個容器 */
 }
 
 footer {
@@ -315,19 +436,24 @@ footer {
     bottom: 0;
     margin-bottom: 1em;
     width: 100%;
-    text-align: center; /* 將內容置中 */
+    text-align: center;
+    /* 將內容置中 */
 }
+
 @media screen and (max-width: 900px) {
-    .main_img{
+    .main_img {
         align-items: center;
     }
-    .stamp,.comic1,.comic2{
+
+    .stamp,
+    .comic1,
+    .comic2 {
         width: 90%;
         align-items: center;
     }
-    .stamp{
+
+    .stamp {
         width: 50%;
         align-items: center;
     }
 }
-
